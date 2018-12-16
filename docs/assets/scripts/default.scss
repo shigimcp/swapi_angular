@@ -1,0 +1,413 @@
+/* Scss Document */
+
+/* ========== FONTS ========== */
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../fonts/Gotham-Book.eot');
+	src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Gotham-Book.woff2') format('woff2'),
+	url('../fonts/Gotham-Book.woff') format('woff'),
+	url('../fonts/Gotham-Book.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Bold';
+	src: url('../fonts/Gotham-Bold.eot');
+	src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Gotham-Bold.woff2') format('woff2'),
+	url('../fonts/Gotham-Bold.woff') format('woff'),
+	url('../fonts/Gotham-Bold.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Black';
+	src: url('../fonts/Gotham-Black.eot');
+	src: url('../fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Gotham-Black.woff2') format('woff2'),
+	url('../fonts/Gotham-Black.woff') format('woff'),
+	url('../fonts/Gotham-Black.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+//================================================== VARIABLES ==================================================
+
+$font-stack: Gotham-Book, Arial, Helvetica, sans-serif;
+//$bold-font-stack: Gotham-Bold, Arial, Helvetica, sans-serif;
+//$bold: Gotham-Bold, Arial, Helvetica, sans-serif;
+$bold: Gotham-Black;
+
+//$primary-color: #FF0000;
+$primary-color: #FFFFFF;
+
+$border: 03px solid;
+
+$marginNone: 0;
+$paddingNone: 0;
+$marginCentered: 0 auto;
+
+$swapiWidth: 1200px;
+//$swapiHeight: 900px;
+$swapiHeight: 100%;
+
+@mixin center {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: auto;
+}
+
+
+//================================================== GLOBAL ==================================================
+
+html, body {
+//	border: $border #FF0000;
+	background: #000000;
+	background-image: url(../images/global/starfield.jpg);
+	background-position: top;
+	background-repeat: repeat;
+
+	height: $swapiHeight;
+
+	margin: $marginNone;
+	padding: $paddingNone;
+}
+
+body {
+//	border: $border #FF0000;
+
+	font: 100% $font-stack;
+	color: $primary-color;
+
+	a:link, a:active, a:visited {
+		color: #999999;
+	}
+}
+
+.header {
+//	border: $border #FF0000;
+//	background-color: #111111;
+	background: #000000;
+
+	text-align: center;
+
+	width: 100%;
+	height: 100px;
+
+//	margin: $marginCentered;
+//	padding: $paddingNone;
+
+	.logoContainer {
+//		border: $border #00FF00;
+
+		cursor: pointer;
+
+		width: 160px;
+		text-align: center;
+
+		display: inline-block;
+		padding-right: 50px;
+
+		.logo {
+//			border: $border #0000FF;
+
+			cursor: inherit;
+
+			width: 80px;
+//			width: inherit;
+//			height: 90px;
+
+//			position: relative;
+//			float: left;
+
+			display: inherit;
+		}
+
+		.logo_swapi_shigimcp {
+//			border: $border #0000FF;
+
+			cursor: inherit;
+
+			width: inherit;
+
+//			position: relative;
+//			float: left;
+			display: inherit;
+		}
+	}
+
+	.hedContainer {
+//		@include center;
+//		border: $border #00FF00;
+
+		display: inline-block;
+
+		.logo_swapi {
+			width: 100px;
+
+			display: inherit;
+		}
+	}
+}
+
+.nav {
+	background-color: #111111;
+
+	text-align: center;
+	height: 95px;
+
+	margin: $marginCentered;
+	padding: $paddingNone;
+
+}
+
+.consoleCheck {
+	color: #00FF00;
+	font-size: 15px;
+	padding: 20px 0;
+}
+
+.bodyContainer {
+//	border: $border #00FF00;
+
+//	background-image: url(../images/global/SP11-AXX_grid02.jpg);
+//	background-image: url(../images/global/bg.jpg);
+//	background-image: url(../images/global/bg_grid.jpg);
+	background-image: url(../images/global/bg_cell.jpg);
+//	background-position: center;
+//	background-repeat: no-repeat;
+	background-position: top;
+//	background-repeat: repeat-y;
+//	background-repeat: repeat-x repeat-y;
+	background-repeat: repeat;
+
+	width: $swapiWidth;
+	height: $swapiHeight;
+//	height: auto;
+
+	margin: $marginCentered;
+	padding: $paddingNone;
+
+	overflow: hidden;
+
+//	.charContainer * {
+//		border: $border #FF0000;
+//	}
+
+	.charContainer {
+//		border: $border #FF0000;
+
+		width: 200px;
+//		height: 800px;
+		height: auto;
+
+		line-height: 20px;
+
+		position: relative;
+		left: 100px;
+		float: left;
+
+		margin: $marginNone;
+		padding: $paddingNone;
+//		padding: inherit;
+//		overflow: hidden;
+
+		.charThumb {
+//			border: $border #00FF00;
+
+			width: 200px;
+			height: 200px;
+//			width: 100%;
+//			height: auto;
+
+			margin: $marginNone;
+			padding: $paddingNone;
+
+			display: block;
+
+//			vertical-align: top;
+
+//			img {
+//	//			border: $border #0000FF;
+//
+//				width: inherit;
+//				height: auto;
+//
+//				margin: $marginNone;
+//				padding: $paddingNone;
+//			}
+		}
+
+		#luke {
+//			border: $border #00FF00;
+			background-image: url(../images/characters/luke.jpg);
+		}
+
+		#vader {
+//			border: $border #00FF00;
+			background-image: url(../images/characters/vader.jpg);
+		}
+
+		#obiwan {
+//			border: $border #00FF00;
+			background-image: url(../images/characters/obiwan.jpg);
+		}
+
+		#r2d2 {
+//			border: $border #00FF00;
+			background-image: url(../images/characters/r2d2.jpg);
+		}
+	}
+
+//	.charContainer:after {
+//		content: "";
+//		display: table;
+//		clear: both;
+//	}
+
+	.infoContainer * {
+//		border: $border #0000FF;
+	}
+
+	.infoContainer {
+//		border: $border #0000FF;
+
+		width: 600px;
+		height: 800px;
+
+		position: relative;
+		right: 200px;
+		float: right;
+
+		margin: 0;
+		padding: 0;
+
+		.charName {
+//			border: $border #0000FF;
+
+			font: 150% $font-stack;
+			font-weight: bold;
+//			color: #FFFFFF;
+			line-height: 27.5px;
+
+			width: 100%;
+//			height: 50px;
+			height: 20px;
+
+//			margin: 0;
+			margin-top: 100px;
+//			padding: 0;
+//			padding-bottom: 30px;
+		}
+
+		.filmTitle {
+//			border: $border #0000FF;
+
+			font: 125% $font-stack;
+			font-weight: bold;
+//			color: #FFFFFF;
+
+			width: 100%;
+			height: 20px;
+
+//			margin: 0;
+//			margin-top: 100px;
+//			padding: 0;
+//			padding-top: 30px;
+			padding: 30px 0 5px 0;
+		}
+
+		.filmDate {
+//			border: $border #0000FF;
+
+			font: 100% $font-stack;
+//			font-weight: bold;
+//			color: #FFFFFF;
+
+			width: 100%;
+			height: 25px;
+
+//			margin: 0;
+//			margin-top: 100px;
+//			padding: 0;
+		}
+
+		.filmInfo {
+//			border: $border #0000FF;
+
+			font: 100% $font-stack;
+//			font-weight: bold;
+//			color: #FFFFFF;
+
+			width: 100%;
+			height: auto;
+
+//			margin: 0;
+//			margin-top: 100px;
+//			padding: 0;
+//			padding-bottom: 30px;
+		}
+	}
+
+	.bgContainer {
+		border: $border #0000FF;
+//		background: #FF00FF;
+//		opacity: 0.25;
+
+////		background-image: url(../images/global/SP11-AXX_grid02.jpg);
+////		background-image: url(../images/global/bg.jpg);
+//		background-image: url(../images/global/bg_grid.jpg);
+//		background-position: center;
+//		background-repeat: no-repeat;
+
+//		width: $swapiWidth + ($swapiWidth / 10);
+		width: inherit;
+		height: inherit;
+
+		position: absolute;
+		z-index: 0;
+
+//		overflow: inherit;
+
+//		.clipRect {
+//			border: $border #0000FF;
+//
+//			background-image: url(../images/global/logo_axx_g.svg);
+//			background-position: center;
+//			background-repeat: no-repeat;
+//		}
+	}
+
+	.fgContainer {
+		border: $border #00FF00;
+
+		width: 100%;
+		height: 100%;
+
+		text-align: center;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		overflow: inherit;
+
+		.xwing {
+			border: $border #0000FF;
+//			background-image: url(../images/global/xwing.png);
+//			background-repeat: no-repeat;
+
+//			width: 500px;
+//			height: 500px;
+
+//			position: absolute;
+//			top: -125px;
+//			left: 0px;
+		}
+	}
+}
+
+

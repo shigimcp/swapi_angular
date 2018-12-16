@@ -29,10 +29,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class CharactersComponent implements OnInit {
 
   @Input() character: Character;
+  @Input() selectedChar: Character;
   @Input() charDetail: CharDetail;
+  @Input() selectedCharDetail: CharDetail;
 
-  selectedChar: Character;
+  // selectedChar: Character;
   charList: Character[];
+  // selectedCharDetail: CharDetail;
 
 
   constructor(
