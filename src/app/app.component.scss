@@ -137,14 +137,16 @@ $swapiHeight: 100%;
 		display: inline-block;
 
 		// .logo_swapi {
-		img {
+		img, svg {
 			// border: $border #0000FF;
 
 			// width: 100%;
-			width: 90%;
+			// width: 90%;
+			width: 80%;
 
 			display: inherit;
 			margin: $marginCentered;
+			padding: 0 0 10px 0;
 		}
 	}
 }
