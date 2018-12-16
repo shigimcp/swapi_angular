@@ -1,0 +1,102 @@
+/* Scss Document */
+
+/* ========== FONTS ========== */
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../../assets/fonts/Gotham-Book.eot');
+	src: url('../../assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+	url('../../assets/fonts/Gotham-Book.woff2') format('woff2'),
+	url('../../assets/fonts/Gotham-Book.woff') format('woff'),
+	url('../../assets/fonts/Gotham-Book.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Bold';
+	src: url('../../assets/fonts/Gotham-Bold.eot');
+	src: url('../../assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../../assets/fonts/Gotham-Bold.woff2') format('woff2'),
+	url('../../assets/fonts/Gotham-Bold.woff') format('woff'),
+	url('../../assets/fonts/Gotham-Bold.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Black';
+	src: url('../../assets/fonts/Gotham-Black.eot');
+	src: url('../../assets/fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+	url('../../assets/fonts/Gotham-Black.woff2') format('woff2'),
+	url('../../assets/fonts/Gotham-Black.woff') format('woff'),
+	url('../../assets/fonts/Gotham-Black.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+//================================================== VARIABLES ==================================================
+
+$font-stack: Gotham-Book, Arial, Helvetica, sans-serif;
+//$bold-font-stack: Gotham-Bold, Arial, Helvetica, sans-serif;
+//$bold: Gotham-Bold, Arial, Helvetica, sans-serif;
+$bold: Gotham-Black;
+
+//$primary-color: #FF0000;
+$primary-color: #FFFFFF;
+
+$border: 03px solid;
+
+$marginNone: 0;
+$paddingNone: 0;
+$marginCentered: 0 auto;
+
+$swapiWidth: 1200px;
+//$swapiHeight: 900px;
+$swapiHeight: 100%;
+
+@mixin center {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: auto;
+}
+
+
+
+//================================================== CHARACTER DETAIL COMPONENT ==================================================
+
+.charDetail_table {
+    /* border: 02px solid # ff0000; */
+
+    width: 100%;
+
+    margin: 0 auto;
+	padding: 0;
+
+    th {
+        border: 01px solid #cccccc;
+    
+        background-color: #0000ff;
+    
+        font-size: 20px;
+    
+        /* width: 100%; */
+    
+        margin: 0 auto;
+        padding: 10px 0;
+
+        h1 {
+            font-size: 25px;
+            margin: 0 auto;
+            padding: 0 0 10px 0;
+        }
+    }
+
+    td {
+        border: 01px solid #cccccc;
+    
+        /* width: 100%; */
+    
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+}

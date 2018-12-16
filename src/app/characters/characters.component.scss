@@ -1,0 +1,161 @@
+/* Scss Document */
+
+/* ========== FONTS ========== */
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../../assets/fonts/Gotham-Book.eot');
+	src: url('../../assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+	url('../../assets/fonts/Gotham-Book.woff2') format('woff2'),
+	url('../../assets/fonts/Gotham-Book.woff') format('woff'),
+	url('../../assets/fonts/Gotham-Book.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Bold';
+	src: url('../../assets/fonts/Gotham-Bold.eot');
+	src: url('../../assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../../assets/fonts/Gotham-Bold.woff2') format('woff2'),
+	url('../../assets/fonts/Gotham-Bold.woff') format('woff'),
+	url('../../assets/fonts/Gotham-Bold.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Black';
+	src: url('../../assets/fonts/Gotham-Black.eot');
+	src: url('../../assets/fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+	url('../../assets/fonts/Gotham-Black.woff2') format('woff2'),
+	url('../../assets/fonts/Gotham-Black.woff') format('woff'),
+	url('../../assets/fonts/Gotham-Black.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+//================================================== VARIABLES ==================================================
+
+$font-stack: Gotham-Book, Arial, Helvetica, sans-serif;
+//$bold-font-stack: Gotham-Bold, Arial, Helvetica, sans-serif;
+//$bold: Gotham-Bold, Arial, Helvetica, sans-serif;
+$bold: Gotham-Black;
+
+//$primary-color: #FF0000;
+$primary-color: #FFFFFF;
+
+$border: 03px solid;
+
+$marginNone: 0;
+$paddingNone: 0;
+$marginCentered: 0 auto;
+
+$swapiWidth: 1200px;
+//$swapiHeight: 900px;
+$swapiHeight: 100%;
+
+@mixin center {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: auto;
+}
+
+
+
+//================================================== CHARACTERS COMPONENT ==================================================
+
+.charContainer {
+	// border: $border #00FF00;
+
+    // background-image: url(../../assets/images/global/bg_cell.jpg);
+	// background-position: top;
+	// background-repeat: repeat;
+
+    font-family: $font-stack;
+    text-align: center;
+	line-height: 20px;
+
+    width: 200px;
+	// width: $swapiWidth;
+	// height: $swapiHeight;
+	height: inherit;
+	// height: auto;
+	// height: 100%;
+	// height: 1800px;
+
+	// position: relative;
+	// position: absolute;
+	// left: 100px;
+	float: left;
+	// float: right;
+
+	// margin: $marginCentered;
+	margin: 0 0 0 100px;;
+	padding: $paddingNone;
+
+	// overflow: scroll;
+	overflow: visible;
+
+	.character {
+		// border: $border #FF00FF;
+	
+		color: black;
+		font-size: 17.5px;
+		font-weight: bold;
+	
+		width: inherit;
+		height: 200px;
+
+		margin: 0;
+		padding: 0;
+	
+		// position: relative;
+		// position: absolute;
+		// z-index: 100;
+		// float: left;
+	
+		.selected {
+			color: red;
+		}
+	
+		.charThumb {
+			// border: $border #FFFF00;
+
+			// background-image: url(../../assets/images/characters/luke.jpg);
+			// background-color: #FFFFFF;
+			background-color: rgba(255,255,255, 0.125);
+			// background-blend-mode: multiply;
+			// opacity: 0.5;
+		
+			color: #FFFFFF;
+			// color: #000000;
+		
+			// width: 200px;
+			// height: 200px;
+			width: inherit;
+			height: inherit;
+	
+			margin: $marginNone;
+			padding: $paddingNone;
+	
+			display: block;
+			cursor: pointer;
+
+			p {
+				margin: 0;
+				padding: 0;
+				transform: translate(0, 90px);
+			}
+		}
+	
+		.charThumb img {
+			// border: $border #0000FF;
+	
+			width: inherit;
+			height: auto;
+	
+			margin: $marginNone;
+			padding: $paddingNone;
+		}
+	}
+}

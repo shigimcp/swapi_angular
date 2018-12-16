@@ -1,0 +1,113 @@
+<!-- <div *ngIf="character"> -->
+<!-- <div *ngIf="character else filmDetailCTA" class="filmDetail"> -->
+
+<!-- <div *ngIf="charDetails" class="filmDetail"> -->
+  <div *ngIf="charDetails else filmDetailCTA" class="infoContainer">
+
+    <!-- <div *ngIf="filmDetails" class="filmDetail"> -->
+    <!-- <div *ngIf="filmDetails else filmDetailError"> -->
+    <div *ngIf="filmDetails.length > 0 else filmDetailError">
+<!-- 
+        <h1>film-container works! (child of characters)</h1>
+
+        <h2>character.name: {{character.name | uppercase}}</h2>
+        <p><b>character.url:</b> {{character.url}}</p>
+ -->
+
+        <h1>{{character.name}}</h1>
+
+<!-- 
+        <h2>charDetails.films:</h2>
+        <div *ngFor="let filmURLs of charDetails.films">
+            <p><b>filmURLs: </b><a href={{filmURLs}} target="new">{{filmURLs}}</a></p>
+        </div>
+ -->
+
+<!-- 
+        <table class="filmDetail_table">
+            <th colspan="7">
+                <h1>charDetails.</h1>
+                name: {{ charDetails.name | uppercase }}
+            </th>
+
+            <tr>
+                <td><b>height:</b> {{ charDetails.height }}</td>
+                <td><b>mass:</b> {{ charDetails.mass }}</td>
+                <td><b>hair_color:</b> {{ charDetails.hair_color }}</td>
+                <td><b>skin_color:</b> {{ charDetails.skin_color }}</td>
+                <td><b>eye_color:</b> {{ charDetails.eye_color }}</td>
+                <td><b>birth_year:</b> {{ charDetails.birth_year }}</td>
+                <td><b>gender:</b> {{ charDetails.gender }}</td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <b>homeworld:</b> {{ charDetails.homeworld }}
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="7">
+                    <b>films:</b><br>
+                    {{ charDetails.films }}
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="7">
+                    <b>species:</b> {{ charDetails.species }}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <b>vehicles:</b><br>
+                    {{ charDetails.vehicles }}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <b>starships:</b><br>
+                    {{ charDetails.starships }}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <b>created:</b> {{ charDetails.created | date }}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>edited:</b> {{ charDetails.edited | date }}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <b>url:</b> {{ charDetails.url }}
+                </td>
+            </tr>
+
+        </table>
+ -->
+
+        <div *ngFor="let thisFilm of filmDetails">
+            <h2>{{ thisFilm.title }}</h2>
+            <p>{{ thisFilm.release_date | date:'fullDate' }}</p>
+            <p>{{ thisFilm.opening_crawl }}</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<ng-template #filmDetailCTA>
+    <!-- <h1>film-container.html - ng-template #filmDetailCTA works! Waiting for filmDetails...</h1> -->
+    <div class="infoContainer">
+        <h2>Click/tap an image to get the character's name and a list of film apperances</h2>
+    </div>
+</ng-template>
+
+
+<ng-template #filmDetailError>
+    <h1>{{character.name}}</h1>
+    <div>
+        <h2>OOPS! Someone doesn't want to be found...</h2>
+    </div>
+</ng-template>
+    

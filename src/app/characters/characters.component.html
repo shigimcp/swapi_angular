@@ -1,0 +1,26 @@
+<div *ngIf="charList else charactersCTA" class="charContainer">
+  <!-- <h1>characters works!</h1> -->
+
+  <div *ngFor="let characters of charList.characters" class="character" id="charContainerID">
+      <!-- <li>{{characters.name | uppercase}}: {{characters.url}}</li> -->
+      <div class="charThumb" [class.selected]="character === selectedChar" (click)="onSelect(characters)" >
+          <!-- <div class="charThumb">{{characters.name | uppercase}}</div> -->
+          <p>{{characters.name | uppercase}}</p>
+          <!-- {{characters.name | uppercase}} -->
+      </div>
+      <!-- <p class="charThumb" [class.selected]="character === selectedChar" (click)="onSelect(characters)" >{{characters.name | uppercase}}</p> -->
+
+      <!-- <app-film-container [character]="selectedChar" [charDetail]="selectedCharDetail"></app-film-container> -->
+  </div>
+
+  <!-- <app-char-detail [character]="selectedChar"></app-char-detail> -->
+  <!-- <app-film-container [character]="selectedChar"></app-film-container> -->
+
+  <!-- <app-char-detail [character]="selectedChar" [charDetail]="selectedCharDetail"></app-char-detail> -->
+</div>
+
+<app-film-container [character]="selectedChar" [charDetail]="selectedCharDetail" class="infoContainer"></app-film-container>
+
+<ng-template #charactersCTA>
+  <h1>characters.html - ng-template #charactersCTA works! Waiting...</h1>
+</ng-template>

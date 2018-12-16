@@ -1,0 +1,184 @@
+/* Scss Document */
+
+/* ========== FONTS ========== */
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../assets/fonts/Gotham-Book.eot');
+	src: url('../assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+	url('../assets/fonts/Gotham-Book.woff2') format('woff2'),
+	url('../assets/fonts/Gotham-Book.woff') format('woff'),
+	url('../assets/fonts/Gotham-Book.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Bold';
+	src: url('../assets/fonts/Gotham-Bold.eot');
+	src: url('../assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../assets/fonts/Gotham-Bold.woff2') format('woff2'),
+	url('../assets/fonts/Gotham-Bold.woff') format('woff'),
+	url('../assets/fonts/Gotham-Bold.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+	font-family: 'Gotham-Black';
+	src: url('../assets/fonts/Gotham-Black.eot');
+	src: url('../assets/fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+	url('../assets/fonts/Gotham-Black.woff2') format('woff2'),
+	url('../assets/fonts/Gotham-Black.woff') format('woff'),
+	url('../assets/fonts/Gotham-Black.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+//================================================== VARIABLES ==================================================
+
+$font-stack: Gotham-Book, Arial, Helvetica, sans-serif;
+//$bold-font-stack: Gotham-Bold, Arial, Helvetica, sans-serif;
+//$bold: Gotham-Bold, Arial, Helvetica, sans-serif;
+$bold: Gotham-Black;
+
+//$primary-color: #FF0000;
+$primary-color: #FFFFFF;
+
+$border: 03px solid;
+
+$marginNone: 0;
+$paddingNone: 0;
+$marginCentered: 0 auto;
+
+$swapiWidth: 1200px;
+//$swapiHeight: 900px;
+$swapiHeight: 100%;
+
+@mixin center {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	margin: auto;
+}
+
+
+
+//================================================== APP COMPONENT ==================================================
+
+.header {
+	// border: $border #FF0000;
+	// background-color: #111111;
+	background: #000000;
+
+    font-family: $font-stack;
+	text-align: center;
+
+	width: 100%;
+	height: 100px;
+
+//	margin: $marginCentered;
+//	padding: $paddingNone;
+
+	a:link, a:active, a:visited {
+		color: #999999;
+	}
+
+	position: fixed;
+	z-index: 999;
+
+	.logoContainer {
+//		border: $border #00FF00;
+
+		cursor: pointer;
+
+		width: 160px;
+		text-align: center;
+
+		display: inline-block;
+		padding-right: 50px;
+
+		.logo {
+//			border: $border #0000FF;
+
+			cursor: inherit;
+
+			width: 80px;
+//			width: inherit;
+//			height: 90px;
+
+//			position: relative;
+//			float: left;
+
+			display: inherit;
+		}
+
+		.logo_swapi_shigimcp {
+//			border: $border #0000FF;
+
+			cursor: inherit;
+
+			width: inherit;
+
+//			position: relative;
+//			float: left;
+			display: inherit;
+		}
+	}
+
+	.hedContainer {
+		// @include center;
+		// border: $border #00FF00;
+
+		color: #FFFFFF;
+		line-height: 10px;
+
+		// width: 250px;
+		width: 350px;
+
+		display: inline-block;
+
+		// .logo_swapi {
+		img {
+			// border: $border #0000FF;
+
+			// width: 100%;
+			width: 90%;
+
+			display: inherit;
+			margin: $marginCentered;
+		}
+	}
+}
+
+.swapi {
+	// border: $border #FF0000;
+
+	// background: #000000;
+	// background-image: url(../assets/images/global/starfield.jpg);
+    background-image: url(../assets/images/global/bg_cell.jpg);
+	background-position: top;
+	background-repeat: repeat;
+
+	font: 100% $font-stack;
+	color: $primary-color;
+
+	width: $swapiWidth;
+	height: $swapiHeight;
+	// height: 100%;
+	// height: auto;
+
+	margin: $marginCentered;
+	padding: $paddingNone;
+
+	// overflow: visible;
+	overflow: scroll;
+
+	position: relative;
+	top: 100px;
+}
+
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
